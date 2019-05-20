@@ -1,0 +1,45 @@
+<ul *ngFor="let item of users">
+    <li >{{item.id}} </li>
+  <li >{{item.name}}</li>
+  <li >{{item.username}}</li>
+  <li >{{item.email}}</li>
+ <button  (click)="deleteUser(item.id)" type="button" class="btn btn-danger">Delete</button>
+  <br>
+</ul>
+<br>
+
+<div>
+  <h2>Add User</h2>
+  <div>
+    <label> Name  :
+      <input [(ngModel)]="user.name" placeholder=" Name"/>
+    </label><br>
+    <label>L Name :
+      <input [(ngModel)]="user.username" placeholder="User Name"/>
+    </label><br>
+    <label>Email  :
+      <input [(ngModel)]="user.emil" placeholder="Email"/>
+    </label><br>
+  </div>
+  <button (click)="addUser()">Save</button>
+</div>
+
+
+
+<!-- <div class="container">
+  <h1>Create User</h1>
+  <form>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="alterEgo">Alter Ego</label>
+      <input type="text" class="form-control" id="alterEgo">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+
+  </form>
+</div> -->
