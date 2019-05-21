@@ -18,12 +18,22 @@ export class EmployeeService {
     ;
   }
   deletEmp(id){
+    
     return this.http.delete
     ('https://jsonplaceholder.typicode.com/users/'+ id )
     .map(res=>res.json())
     ;
   }
-   getUsers(){
+
+  editEmp(id,emp){
+    
+    return this.http.put
+    ('https://jsonplaceholder.typicode.com/users/'+ id,emp )
+    .map(res=>res.json())
+    ;
+  }
+  getUsers(){
+    console.log("ssls,flsf,lsd;f,sdlflsdlf");
      return this.http.get
      ('https://jsonplaceholder.typicode.com/users')
      .map(res=>res.json())

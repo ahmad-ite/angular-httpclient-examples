@@ -71,4 +71,12 @@
     background-color: gray !important;
     color: white;
   }
+
+  .del {
+    margin-left: 90px;
+    list-style-type: none;
+    padding: 0;
+    width: 15em;
+    color: red
+  }
   

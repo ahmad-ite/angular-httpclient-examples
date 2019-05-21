@@ -3,7 +3,12 @@
   <li >{{item.name}}</li>
   <li >{{item.username}}</li>
   <li >{{item.email}}</li>
- <button  (click)="deleteUser(item.id)" type="button" class="btn btn-danger">Delete</button>
+  <span (click)="editUser(item.id,item)" class="">
+    <button  type="button" class="btn btn-success">Update</button>
+   </span>
+  <span (click)="deleteUser(item.id)" class="del">
+ <button  type="button" class="btn btn-danger">Delete</button>
+</span>
   <br>
 </ul>
 <br>
@@ -18,7 +23,7 @@
       <input [(ngModel)]="user.username" placeholder="User Name"/>
     </label><br>
     <label>Email  :
-      <input [(ngModel)]="user.emil" placeholder="Email"/>
+      <input [(ngModel)]="user.email" placeholder="Email"/>
     </label><br>
   </div>
   <button (click)="addUser()">Save</button>
